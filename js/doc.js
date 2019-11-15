@@ -29,7 +29,7 @@ function cola(cl){
         document.execCommand("paste", false, null);
     }
 }
-function desfazer(dsfz){
+function desfaz(dsfz){
     if(dsfz){
         document.execCommand("undo", false, null);
     }
