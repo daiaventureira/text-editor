@@ -7,6 +7,8 @@ var itl = document.getElementById('italico').addEventListener('click', italico);
 var cp =  document.getElementById('copia').addEventListener('click', copia);
 var cl = document.getElementById('cola').addEventListener('click', cola);
 var dsfz = document.getElementById('desfaz').addEventListener('click', desfaz);
+var jstfc = document.getElementById('justifica').addEventListener('click', justifica);
+
 
 function negrito(ngt){
 
@@ -34,4 +36,10 @@ function desfaz(dsfz){
         document.execCommand("undo", false, null);
     }
 }
+function justifica(jstfc){
+    if(jstfc){
+        document.execCommand("justify", false, null );
+    }
+}
+
 
