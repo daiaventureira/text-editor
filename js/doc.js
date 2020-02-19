@@ -7,7 +7,11 @@ var itl = document.getElementById('italico').addEventListener('click', italico);
 var cp =  document.getElementById('copia').addEventListener('click', copia);
 var cl = document.getElementById('cola').addEventListener('click', cola);
 var dsfz = document.getElementById('desfaz').addEventListener('click', desfaz);
-var jstfc = document.getElementById('justifica').addEventListener('click', justifica);
+var jstfc = document.getElementById('justificaCentro').addEventListener('click', justificaCentro);
+var rfz = document.getElementById('refaz').addEventListener('click', refaz);
+var subl = document.getElementById('sublinha').addEventListener('click', sublinha);
+var jstfcDireita = document.getElementById('justificaDireita').addEventListener('click', justificaDireita);
+var jstfcEsquerda = document.getElementById('justificaEsquerda').addEventListener('click', justificaEsquerda);
 
 
 function negrito(ngt){
@@ -36,9 +40,29 @@ function desfaz(dsfz){
         document.execCommand("undo", false, null);
     }
 }
-function justifica(jstfc){
+function justificaCentro(jstfc){
     if(jstfc){
-        document.execCommand("justify", false, null );
+        document.execCommand("justifyCenter", false, null );
+    }
+}
+function refaz(rfz){
+    if(rfz){
+        document.execCommand("redo", false, null);
+    }
+}
+function sublinha(subl){
+    if(subl){
+        document.execCommand("underline", false, null);
+    }
+}
+function justificaDireita(jstfcDireita){
+    if(jstfcDireita){
+        document.execCommand("justifyRight", false, null);
+    }
+}
+function justificaEsquerda(jstfcEsquerda){
+    if(jstfcEsquerda){
+        document.execCommand("justifyLeft", false, null);
     }
 }
 
